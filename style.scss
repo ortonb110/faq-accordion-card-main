@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Kumbh Sans';
+    src: url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+}
+
+
+//Colors
+$color-text_dark-blue: hsl(238, 29%, 16%);
+$color-text_red-soft: hsl(14, 88%, 65%);
+$color-text_very-dark-greyish-blue: hsl(237, 12%, 33%);
+$color-text_dark-greyish-blue: hsl(240, 6%, 50%);
+$color-dividers_light-grey: hsl(240, 5%, 91%);
+
+
+*,*::before, *::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: rgb(175,103,233);
+    background: linear-gradient(177deg, rgba(175,103,233,1) 28%, rgba(101,101,231,1) 100%);
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    main {
+        background-color: #fff;
+    
+        border-radius: 20px;
+        box-shadow: 0px 58px 153px -17px rgba(0,0,0,0.65);
+        -webkit-box-shadow: 0px 58px 153px -17px rgba(0,0,0,0.65);
+        -moz-box-shadow: 0px 58px 153px -17px rgba(0,0,0,0.65);
+        
+    
+        .content-grid {
+            button {
+                border: none;
+                background-color: inherit;
+                font-size: 1.3rem;
+                border-bottom: 1px solid $color-dividers_light-grey;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 1.5rem;
+                padding: 0 0 1.5rem 0;
+                img {
+                    font-size: 1rem;
+                }
+            }
+
+            .panel {
+                .active {
+                    display: block;
+                    transition: all 0.2s ease;
+                }
+            }
+
+            p {
+                color: $color-text_dark-greyish-blue;
+                
+                display: none;
+            }
+        }
+        
+
+        
+    }
+}
+
+@media screen and (min-width: 375px) {
+
+    main {
+         width: 335px;
+       
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .image-grid {
+         position: absolute;
+        width: 25rem;
+        top: -11rem;
+        left: 51%;
+        transform: translateX(-50%);
+        
+        .illustration {
+            position: relative;
+            top: -8rem;
+        }
+        
+        
+
+        .images {
+            width: 24rem;
+         }
+        }
+
+        .content-grid {
+            padding: 0 2rem;   
+             margin-top: 12rem;
+            
+            h1 {
+                text-align: center;
+                font-size: 3.2rem;
+                font-weight: 700;
+                margin-top: 0;
+            }
+        }
+    }
+    
+}
+
