@@ -50,6 +50,7 @@ body {
 
       .container {
         color: $color-text_dark-greyish-blue;
+        cursor: pointer;
 
         .accordion-label {
           position: relative;
@@ -149,34 +150,40 @@ body {
 @media screen and (min-width: 900px) {
   main {
     min-width: 850px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     
+    overflow: hidden;
     
     .image-grid {
         position: absolute;
-        left: -20rem;
-        
-        
+        left: -5rem;
+        top: 100%;
+        transform: translateY(-58%);
+       
       .illustration {
         position: relative;
-        top: -38rem;
+        top: -35rem;
       }
 
       .images {
         img {
-            width: 45rem;
+            width: 40rem;
             height: fit-content;
+           
         }
         
       }
     }
     .content-grid {
-        
-        &::before {
-            content: "";
-            width: 100%;
+       width: 40rem; 
+       position: relative;
+       right: -43rem;
+       margin-top: 5rem;
+        h1 {
+            text-align: left;
+            margin-bottom: 6rem;
         }
+
      }
   }
 

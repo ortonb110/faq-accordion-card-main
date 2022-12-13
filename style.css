@@ -37,6 +37,7 @@ body main .content-grid hr {
 }
 body main .content-grid .container {
   color: hsl(240deg, 6%, 50%);
+  cursor: pointer;
 }
 body main .content-grid .container .accordion-label {
   position: relative;
@@ -114,25 +115,33 @@ body main .content-grid .container .accordion-content {
 @media screen and (min-width: 900px) {
   main {
     min-width: 850px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    overflow: hidden;
   }
   main .image-grid {
     position: absolute;
-    left: -20rem;
+    left: -5rem;
+    top: 100%;
+    transform: translateY(-58%);
   }
   main .image-grid .illustration {
     position: relative;
-    top: -38rem;
+    top: -35rem;
   }
   main .image-grid .images img {
-    width: 45rem;
+    width: 40rem;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
-  main .content-grid::before {
-    content: "";
-    width: 100%;
+  main .content-grid {
+    width: 40rem;
+    position: relative;
+    right: -43rem;
+    margin-top: 5rem;
+  }
+  main .content-grid h1 {
+    text-align: left;
+    margin-bottom: 6rem;
   }
 }/*# sourceMappingURL=style.css.map */
