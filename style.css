@@ -2,7 +2,9 @@
   font-family: "Kumbh Sans";
   src: url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -26,27 +28,46 @@ body main {
   -webkit-box-shadow: 0px 58px 153px -17px rgba(0, 0, 0, 0.65);
   -moz-box-shadow: 0px 58px 153px -17px rgba(0, 0, 0, 0.65);
 }
-body main .content-grid button {
-  border: none;
-  background-color: inherit;
-  font-size: 1.3rem;
-  border-bottom: 1px solid hsl(240deg, 5%, 91%);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
-  padding: 0 0 1.5rem 0;
+body main .content-grid h1 {
+  font-weight: 700;
 }
-body main .content-grid button img {
-  font-size: 1rem;
+body main .content-grid hr {
+  border-top: 1px solid hsl(240deg, 5%, 91%);
+  margin-bottom: 2rem;
 }
-body main .content-grid .panel .active {
-  display: block;
-  transition: all 0.2s ease;
-}
-body main .content-grid p {
+body main .content-grid .container {
   color: hsl(240deg, 6%, 50%);
-  display: none;
+}
+body main .content-grid .container .accordion-label {
+  position: relative;
+}
+body main .content-grid .container .accordion-label img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body main .content-grid .container .accordion-label::before {
+  content: url("./images/icon-arrow-down.svg");
+  position: absolute;
+  right: -3px;
+}
+body main .content-grid .container.active .accordion-content {
+  height: 5rem;
+}
+body main .content-grid .container.active .accordion-label {
+  color: #000;
+  font-weight: 700;
+}
+body main .content-grid .container.active .accordion-label::before {
+  content: url("./images/icon-arrow-down.svg");
+  transform: rotateX(3.142rad);
+}
+body main .content-grid .container .accordion-content {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 375px) {
@@ -59,6 +80,9 @@ body main .content-grid p {
   main .image-grid {
     position: absolute;
     width: 25rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     top: -11rem;
     left: 51%;
     transform: translateX(-50%);
@@ -71,7 +95,7 @@ body main .content-grid p {
     width: 24rem;
   }
   main .content-grid {
-    padding: 0 2rem;
+    padding: 0 2.5rem;
     margin-top: 12rem;
   }
   main .content-grid h1 {
@@ -79,5 +103,36 @@ body main .content-grid p {
     font-size: 3.2rem;
     font-weight: 700;
     margin-top: 0;
+  }
+  main .content-grid .container .accordion-label {
+    font-size: 1.4rem;
+  }
+  main .content-grid .container .accordion-label img {
+    width: 1rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  main {
+    min-width: 850px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main .image-grid {
+    position: absolute;
+    left: -20rem;
+  }
+  main .image-grid .illustration {
+    position: relative;
+    top: -38rem;
+  }
+  main .image-grid .images img {
+    width: 45rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main .content-grid::before {
+    content: "";
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -13,15 +13,16 @@
     />
 
     <title>Frontend Mentor | FAQ Accordion Card</title>
+    <script src="./main.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
-      <section class="image-grid">
+      <div class="image-grid">
         <div class="images">
           <picture class="woman-illustration">
             <source
-              media="(max-width: 480px)"
+              media="(max-width: 899px)"
               srcset="./images/illustration-woman-online-mobile.svg"
             />
             <img
@@ -31,7 +32,7 @@
           </picture>
           <picture class="illustration">
             <source
-              media="(max-width: 480px)"
+              media="(max-width: 899px)"
               srcset="./images/bg-pattern-mobile.svg"
             />
             <img
@@ -40,79 +41,84 @@
             />
           </picture>
         </div>
-      </section>
+      </div>
       <section class="content-grid">
         <h1>FAQ</h1>
-        <button class="accordion">
-          How many team members can I invite?
-          <img
-            src="./images/icon-arrow-down.svg"
-            aria-hidden="true"
-            class="arrow-down"
-          />
-        </button>
-        <div class="panel">
-          <p>
+        <div class="container">
+          <div class="accordion-label">
+            How many team members can I invite?
+            <!-- <img
+              src="./images/icon-arrow-down.svg"
+              aria-hidden="true"
+              class="arrow-down"
+            /> -->
+          </div>
+          <div class="accordion-content">
             You can invite up to 2 additional users on the Free plan. There is
             no limit on team members for the Premium plan.
-          </p>
+          </div>
         </div>
-        <button class="accordion">
-          What is the maximum file upload size?
-          <img
-            src="./images/icon-arrow-down.svg"
-            aria-hidden="true"
-            class="arrow-down"
-          />
-        </button>
-        <div class="panel">
-          <p>
-            No more than 2GB. All files in your account must fit your allotted
+        <hr />
+        <div class="container">
+          <div class="accordion-label">
+            What is the maximum file upload size?
+            <!-- <img
+              src="./images/icon-arrow-down.svg"
+              aria-hidden="true"
+              class="arrow-down"
+            /> -->
+          </div>
+          <div class="accordion-content">
+            No more than 2GB. All files in your account must fit your alloted
             storage space.
-          </p>
+          </div>
         </div>
-        <button class="accordion">
-          How do I reset my password?
-          <img
-            src="./images/icon-arrow-down.svg"
-            aria-hidden="true"
-            class="arrow-down"
-          />
-        </button>
-        <div class="panel">
-          <p>
+        <hr />
+        <div class="container">
+          <div class="accordion-label">
+            How do I reset my password?
+            <!-- <img
+              src="./images/icon-arrow-down.svg"
+              aria-hidden="true"
+              class="arrow-down"
+            /> -->
+          </div>
+          <div class="accordion-content">
             Click “Forgot password” from the login page or “Change password”
             from your profile page. A reset link will be emailed to you.
-          </p>
+          </div>
         </div>
-        <button class="accordion">
-          Can I cancel my subscription?
-          <img
-            src="./images/icon-arrow-down.svg"
-            aria-hidden="true"
-            class="arrow-down"
-          />
-        </button>
-        <div class="panel">
-          <p>
+        <hr />
+        <div class="container">
+          <div class="accordion-label">
+            Can I cancel my subscription?
+            <!-- <img
+              src="./images/icon-arrow-down.svg"
+              aria-hidden="true"
+              class="arrow-down"
+            /> -->
+          </div>
+          <div class="accordion-content">
             Yes! Send us a message and we’ll process your request no questions
             asked.
-          </p>
+          </div>
         </div>
-        <button class="accordion">
-          Do you provide additional support?
-          <img
-            src="./images/icon-arrow-down.svg"
-            aria-hidden="true"
-            class="arrow-down"
-          />
-        </button>
-        <div class="panel">
-          <p>
+        <hr />
+        <div class="container">
+          <div class="accordion-label">
+            Do you provide additional support?
+            <!-- <img
+              src="./images/icon-arrow-down.svg"
+              aria-hidden="true"
+              class="arrow-down"
+            /> -->
+          </div>
+          <div class="accordion-content">
             Chat and email support is available 24/7. Phone lines are open
             during normal business hours.
-          </p>
+          </div>
         </div>
+        <hr style="margin-bottom: 6rem;" />
       </section>
     </main>
   </body>
